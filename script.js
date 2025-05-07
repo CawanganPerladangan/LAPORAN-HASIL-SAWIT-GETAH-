@@ -62,3 +62,25 @@ function exportCSV() {
 }
 
 renderTable();
+const entry = {
+  tempat: document.getElementById('tempat').value,  // Ambil nilai nama tempat
+  tarikh: document.getElementById('tarikh').value,
+  jenis: document.getElementById('jenis').value,
+  kuantiti: parseFloat(document.getElementById('kuantiti').value),
+  harga: parseFloat(document.getElementById('harga').value)
+};
+data.forEach(item => {
+  const row = document.createElement('tr');
+  const pendapatan = item.kuantiti * item.harga;
+  totalPendapatan += pendapatan;
+
+  row.innerHTML = `
+    <td>${item.tempat}</td>  <!-- Menambah tempat dalam jadual -->
+    <td>${item.tarikh}</td>
+    <td>${item.jenis}</td>
+    <td>${item.kuantiti}</td>
+    <td>${item.harga.toFixed(2)}</td>
+    <td>${pendapatan.toFixed(2)}</td>
+  `;
+  tableBody.appendChild(row);
+});
