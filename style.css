@@ -24,6 +24,27 @@ table, th, td {
 th, td {
   padding: 8px;
   text-align: center;
+  table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  width: 150px; /* Lebarkan untuk Nama Tempat */
+}
+
+h1, h2, h3 {
+  color: #2e6b36;
+}
 }
 
 h1, h2, h3 {
